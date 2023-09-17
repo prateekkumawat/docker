@@ -1,0 +1,13 @@
+Version: "3.8"
+services: 
+   
+    web: 
+      container_name: mytest
+      image: httpd:latest
+      port:
+        - "40:80"
+      volumes: 
+        - myvol:/usr/share/public/html/
+
+volumes:
+  - myvol:
